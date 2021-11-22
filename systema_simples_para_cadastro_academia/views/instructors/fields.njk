@@ -1,0 +1,94 @@
+<div class="item">
+      <div>Avatar URL</div>
+      <div>
+        <input 
+          type="url" 
+          name="avatar_url"
+          placeholder="http://"
+          value="{{ instructor.avatar_url }}"
+          >
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Nome</div>
+      <div>
+        <input 
+        type="text" 
+        name="name"
+        placeholder="Escreva seu nome"
+        value="{{ instructor.name }}"
+        >
+      </div>
+    </div>
+
+        <div class="item">
+      <div>E-mail</div>
+      <div>
+        <input 
+        type="email" 
+        name="email"
+        placeholder="gym@gym.com"
+        value="{{ instructor.email }}"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Telefone</div>
+      <div>
+        <input 
+        type="tel" 
+        name="phone"
+        placeholder="(DDD) 91155 5611"
+        value="{{ instructor.phone }}"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <div>data de nascimento</div>
+      <div>
+        <input type="date" 
+        name="birth"
+        value="{{ instructor.birth }}"
+        >
+      </div>
+    </div>
+
+    <div class="item">
+      <div>Sexo</div>
+      <div>
+        <span><input 
+        type="radio" 
+        name="gender" 
+        value="M" 
+        {% if instructor.gender == 'M' %}
+          checked 
+        {% endif %}
+        >Masculino</span>
+
+        <span><input 
+        type="radio" 
+        name="gender" 
+        value="F"         
+        {% if instructor.gender == 'F' %}
+          checked 
+        {% endif %}
+        >Feminino</span>
+      </div>
+    </div>
+   
+    <div class="item">
+      <div>Acompanhamentos</div>
+      <div>
+        <input 
+          type="text" 
+          name="services"
+          placeholder="Separe os serviços prestados por virgual"
+          value="{{ instructor.services }}"
+          >
+      </div>
+    </div>
+
+      <button type="submit">Salvar</button>

@@ -1,0 +1,10 @@
+    <script>
+      const formDelete = document.querySelector('#form_Delete');
+      formDelete.addEventListener('submit', function(event) {
+        const confirmation = confirm("Deseja excluir ?")
+        if (!confirmation){
+          event.preventDefault()
+        }
+      })
+
+    </script>
